@@ -84,7 +84,7 @@ const Gradient = () => {
   window.requestAnimationFrame(animate);
 
   return (
-    <canvas ref={canvasRef} className="canvas" />
+    <canvas ref={canvasRef} width={document.body.clientWidth} height={document.body.clientHeight} className="canvas" />
   )
 }
 
