@@ -42,7 +42,7 @@ const Gradient = () => {
     const stageWidth = document.body.clientWidth;
     const stageHeight = document.body.clientHeight;
 
-    let curColor = 1;
+    let curColor = 2;
     for (let i = 0; i < totalParticles; i++) {
       const item = new GlowParticle({
         x: Math.random() * stageWidth,
