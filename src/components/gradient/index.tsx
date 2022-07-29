@@ -14,8 +14,8 @@ const Gradient = () => {
   const pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
   const totalParticles = 12;
   const particles: GlowParticle[] = [];
-  const [maxRadius, setMaxRadius] = useState(0);
-  const [minRadius, setMinRadius] = useState(0);
+  const [maxRadius, setMaxRadius] = useState(900);
+  const [minRadius, setMinRadius] = useState(400);
 
 
   const resize = () => {
