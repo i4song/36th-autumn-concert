@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import COLORS from './colors';
 import { GlowParticle } from './glowParticle';
 
@@ -79,12 +79,14 @@ const Gradient = () => {
     }
   }
 
-  window.addEventListener('resize', resize, false);
-  resize();
-  window.requestAnimationFrame(animate);
+  useEffect(() => {
+    window.addEventListener('resize', resize, false);
+    resize();
+    window.requestAnimationFrame(animate);
+  })
 
   return (
-    <canvas ref={canvasRef} width={document.body.clientWidth} height={document.body.clientHeight} className="canvas" />
+    <canvas ref={canvasRef} className="canvas" />
   )
 }
 
