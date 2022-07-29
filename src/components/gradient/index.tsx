@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import COLORS from './colors';
 import { GlowParticle } from './glowParticle';
 
@@ -14,13 +14,15 @@ const Gradient = () => {
   const pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
   const totalParticles = 12;
   const particles: GlowParticle[] = [];
-  const maxRadius = 900;
-  const minRadius = 500;
+  const [maxRadius, setMaxRadius] = useState(0);
+  const [minRadius, setMinRadius] = useState(0);
 
 
   const resize = () => {
     const stageWidth = document.body.clientWidth;
     const stageHeight = document.body.clientHeight;
+    setMaxRadius((stageWidth + stageHeight) / 2);
+    setMinRadius((stageWidth + stageHeight) / 4);
 
     if (canvasRef.current) {
       const canvas = canvasRef.current;
