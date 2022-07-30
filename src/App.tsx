@@ -1,9 +1,11 @@
 import React from 'react';
-import Gradient from './components/gradient';
+import CustomAudio from './components/CustomAudio';
+import Gradient from './components/Gradient';
 
 const App = () => {
   return (
     <div className='App'>
+      <CustomAudio/>
       <Gradient/>
     </div>
   );
