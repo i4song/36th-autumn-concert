@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomAudio from './components/CustomAudio';
-import Gradient from './components/Gradient';
+import Gradient from './components/GradientAnimate';
 
 const App = () => {
   return (
